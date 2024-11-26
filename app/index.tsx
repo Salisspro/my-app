@@ -1,14 +1,15 @@
 
 
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 
 const index = () => {
   return (
     <View style={styles.app}>
-      <Text>index</Text>
-      <Text style={{padding: 20}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto laborum corrupti officiis voluptate perspiciatis blanditiis, iste hic natus illo repudiandae iure saepe assumenda provident molestiae reiciendis totam? Eos, voluptatibus qui.</Text>
-      <Button title='click me'/>
+      <Text>salisspro</Text>
+      <TouchableOpacity style={{backgroundColor: '#161620', padding: 15, width: 270, borderRadius: 5, margin: 20}}>
+        <Text style={{color: '#fff', textAlign: 'center'}}>Let get started</Text>
+      </TouchableOpacity>
     </View>
   )
 }
