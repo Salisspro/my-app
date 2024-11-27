@@ -1,22 +1,31 @@
 
-
-import { Button, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Button, ImageBackground, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { Link } from 'expo-router'
 
 const index = () => {
     return (
         <View style={styles.app}>
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end', margin: 20 }}>
-                <StatusBar backgroundColor='#161616'/>
+            <ImageBackground
+                style={{ flex: 1, width: '100%', height: '100%' }}
+                resizeMode='contain'
+                source={require('../assets/Logo/logo2.png')}>
 
-                <TouchableOpacity style={{ backgroundColor: '#161620', padding: 15, width: 270, borderRadius: 5, margin: 20 }}>
-                    <Text style={{ color: '#fff', textAlign: 'center' }}>Get started</Text>
+                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end', margin: 20 }}>
+                    <StatusBar backgroundColor='#161616' />
 
-                </TouchableOpacity>
-            </View>
+                    <TouchableOpacity style={{ backgroundColor: '#161616', padding: 15, width: 270, borderRadius: 5, margin: 20 }}>
 
-                    
+                        <Link
+                            style={{ color: '#fff', textAlign: 'center' }}
+                            href='./Home'>
+                            Get Started
+                        </Link>
+
+                    </TouchableOpacity>
+                </View>
+
+            </ImageBackground>
         </View>
     )
 }
